@@ -25,7 +25,6 @@ class Batalha:
 
             if opcao == "1":
                 self.jogador.atacar(self.inimigo)
-                continue
 
             elif opcao == "2":
                 # TODO: implementar item
@@ -39,6 +38,7 @@ class Batalha:
                 print("Opção inválida.")
                 continue
 
-            self.inimigo.atacar(self.jogador)
+            if self.inimigo.esta_vivo():
+                self.inimigo.atacar(self.jogador)
 
         # TODO: verificar quem venceu
