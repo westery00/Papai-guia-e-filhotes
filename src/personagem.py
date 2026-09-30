@@ -11,7 +11,7 @@ class Personagem(ABC):
         self.vida_atual = vida
 
     def esta_vivo(self):
-        return self.vida > 0
+        return self.vida_atual > 0
 
     
     def receber_dano(self, dano):

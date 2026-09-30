@@ -16,4 +16,4 @@ class Inimigo(Personagem):
         alvo.receber_dano(self.ataque)
 
     def receber_dano(self, dano):
-        self.vida_atual = self.vida - (dano - self.defesa)
+        self.vida_atual = self.vida_atual - (dano - self.defesa)

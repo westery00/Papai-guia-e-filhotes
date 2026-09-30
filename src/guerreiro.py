@@ -9,7 +9,7 @@ class Guerreiro(Personagem):
             vida=120,
             ataque=20,
             defesa=15,
-            vida_atual=120
+            vida_atual=self.vida
         )
         
 
@@ -17,4 +17,4 @@ class Guerreiro(Personagem):
         alvo.receber_dano(self.ataque)
 
     def receber_dano(self, dano):
-        self.vida_atual = self.vida - (dano - self.defesa)
+        self.vida_atual = self.vida_atual - (dano - self.defesa)
