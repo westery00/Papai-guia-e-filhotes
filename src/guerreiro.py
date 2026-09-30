@@ -8,9 +8,13 @@ class Guerreiro(Personagem):
             nome=nome,
             vida=120,
             ataque=20,
-            defesa=15
+            defesa=15,
+            vida_atual=120
         )
+        
 
     def atacar(self, alvo):
-        # TODO: implementar ataque do guerreiro
-        pass
+        alvo.receber_dano(self.ataque)
+
+    def receber_dano(self, dano):
+        self.vida_atual = self.vida - (dano - self.defesa)

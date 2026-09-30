@@ -24,8 +24,7 @@ class Batalha:
             opcao = input("Escolha uma opção: ")
 
             if opcao == "1":
-                # TODO: jogador ataca inimigo
-                pass
+                self.jogador.atacar(self.inimigo)
 
             elif opcao == "2":
                 # TODO: implementar item
@@ -39,6 +38,6 @@ class Batalha:
                 print("Opção inválida.")
                 continue
 
-            # TODO: inimigo deve atacar depois do jogador
+            self.inimigo.atacar(self.jogador)
 
         # TODO: verificar quem venceu
