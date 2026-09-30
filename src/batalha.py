@@ -25,6 +25,7 @@ class Batalha:
 
             if opcao == "1":
                 self.jogador.atacar(self.inimigo)
+                continue
 
             elif opcao == "2":
                 # TODO: implementar item

@@ -9,7 +9,7 @@ class Guerreiro(Personagem):
             vida=120,
             ataque=20,
             defesa=15,
-            vida_atual=self.vida
+            vida_atual=120
         )
         
 
