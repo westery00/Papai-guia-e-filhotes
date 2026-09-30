@@ -8,9 +8,12 @@ class Inimigo(Personagem):
             nome=nome,
             vida=vida,
             ataque=ataque,
-            defesa=defesa
+            defesa=defesa,
+            vida_atual=vida
         )
 
     def atacar(self, alvo):
-        # TODO: implementar ataque
-        pass
+        alvo.receber_dano(self.ataque)
+
+    def receber_dano(self, dano):
+        self.vida_atual = self.vida_atual - (dano - self.defesa)
