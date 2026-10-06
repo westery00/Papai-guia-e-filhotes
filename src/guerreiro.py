@@ -1,5 +1,5 @@
 from personagem import Personagem
-
+from item import Item
 
 class Guerreiro(Personagem):
 
@@ -11,7 +11,8 @@ class Guerreiro(Personagem):
             defesa=15,
             vida_atual=120
         )
-        
+
+        self.inventario = [Item("poção de vida", 2)]
 
     def atacar(self, alvo):
         alvo.receber_dano(self.ataque)
