@@ -48,7 +48,23 @@ class Batalha:
                         print("Magia inválida.")
                         continue
                 else:
-                    pass
+                    print("\n--- ITENS ---")
+                    for i, item in enumerate(self.jogador.inventario):
+                        print(f"{i + 1} - {item.nome} (Quantidade: {item.valor})")
+
+                    item_escolhido = input("Escolha um item: ")
+
+                    try:
+                        item_index = int(item_escolhido) - 1
+                        if 0 <= item_index < len(self.jogador.inventario):
+                            item = self.jogador.inventario[item_index]
+                            item.usar(self.jogador)
+                        else:
+                            print("Item inválido.")
+                            continue
+                    except ValueError:
+                        print("Opção inválida.")
+                        continue
 
             elif opcao == "3":
                 print("Você fugiu da batalha!")

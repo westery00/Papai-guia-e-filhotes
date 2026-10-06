@@ -23,9 +23,13 @@ class Personagem(ABC):
         pass
 
     def mostrar_status(self):
-        print(
+        status = (
             f"{self.nome} | "
             f"Vida: {self.vida_atual}/{self.vida} | "
             f"Ataque: {self.ataque} | "
             f"Defesa: {self.defesa}"
         )
+
+        if hasattr(self, "mana"):
+            status += f" | Mana: {self.mana}"
+
