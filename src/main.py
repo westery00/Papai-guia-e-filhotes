@@ -1,11 +1,21 @@
 from guerreiro import Guerreiro
 from inimigo import Inimigo
 from batalha import Batalha
+from mago import Mago
 
 
 def main():
-
-    jogador = Guerreiro("Arthur")
+    Nome = input("Digite o nome do seu personagem: ")
+    classe = input("Escolha a classe do seu personagem(1-Guerreiro, 2-Mago): ")
+    if classe == "1":
+        classe = Guerreiro  
+    elif classe == "2":
+        classe = Mago
+    else:
+        print("Classe inválida. O personagem será um Guerreiro por padrão.")
+        classe = Guerreiro
+        
+    jogador = classe(Nome)
 
     inimigo = Inimigo(
         nome="Goblin",
